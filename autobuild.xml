@@ -6,7 +6,7 @@
     <key>package_description</key>
     <map>
       <key>canonical_repo</key>
-      <string>https://github.com/secondlife/3p-glm</string>
+      <string>https://github.com/AlchemyViewer/3p-glm</string>
       <key>copyright</key>
       <string>Copyright (c) 2005 - G-Truc Creation</string>
       <key>description</key>
