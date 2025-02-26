@@ -15,7 +15,7 @@ if [ -z "$AUTOBUILD" ] ; then
     exit 1
 fi
 
-if [ "$OSTYPE" = "cygwin" ] ; then
+if [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" ]] ; then
     autobuild="$(cygpath -u $AUTOBUILD)"
 else
     autobuild="$AUTOBUILD"
@@ -28,8 +28,6 @@ stage="$top/stage"
 glm_SOURCE_DIR="glm"
 
 mkdir -p "$stage/include/glm"
-cp -a $glm_SOURCE_DIR/* "$stage/include/glm"
+cp -a $glm_SOURCE_DIR/glm/* "$stage/include/glm"
 mkdir -p "$stage/LICENSES"
 cp -a LICENSE.glm "$stage/LICENSES/glm_license.txt"
-echo "v1.0.1" > "$stage/include/glm/glm_version.txt"
-
